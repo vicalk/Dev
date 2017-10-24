@@ -1,0 +1,115 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background:url('http://www.nnyautobody.com/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1ab188;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+a:hover {
+    color: #179b77;
+}
+
+ /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 500;
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: red;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100;
+}
+
+/* Extra styles for the cancel button */
+.signupbtn {
+    padding: 14px 20px;
+    background-color: green;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn,.cancelbtn {
+    float: left;
+    width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+label {
+    cursor: pointer;
+    color: #555;
+    display: block;
+    padding: 10px;
+    margin: 3px;
+}
+h2 {
+    text-align: center;
+    color: #D0090C;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+h3 {
+	align-content: center;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: 500;
+}
+table {
+	background: #FFFFFF;
+	backface-visibility: hidden;
+	 	
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+table, th, td {
+   border: 3px solid black;
+}

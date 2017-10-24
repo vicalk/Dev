@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background:url('http://www.nnyautobody.com/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+.search {
+  width: 100%;
+  position: absolute;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid red;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: red;
+}
+
+.searchButton {
+  position: absolute;  
+  right: 0px;
+  width: 100px;
+  height: 36px;
+  border: 1px solid red;
+  background: red;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+}
+.wrap2{
+  width: 30%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+}
+
+table {
+	background: #FFFFFF;
+	backface-visibility: hidden;
+	 	
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+table, th, td {
+   border: 3px solid black;
+}

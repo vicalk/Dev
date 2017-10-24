@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background:url('http://www.nnyautobody.com/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.col-md-8{
+  background-color: white;
+    padding: 10;
+	 margin: 20px 0;
+	 padding: 20px 10px;
+	align-items: center;
+}
+.side{
+	vertical-align: middle;
+}
+
+h1 {
+	color: black;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+article {
+	text-align-last: center;
+	color: #F8F8F8;
+	
+}
