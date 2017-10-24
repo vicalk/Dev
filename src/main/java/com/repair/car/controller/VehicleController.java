@@ -25,7 +25,7 @@ public class VehicleController {
     private final static org.slf4j.Logger logger = LoggerFactory.getLogger(VehicleController.class);
     private static final String VEHICLE_REGISTER_FORM = "vehicleRegisterForm";
     private static final String VEHICLE_SEARCH_FORM = "vehicleSearchForm";
-    private static final String VEHICLE_EDIT_FORM = "vehicleEditForm";
+    private static final String VEHICLE_TO_EDIT = "vehicleToEdit";
     private static final String VEHICLE_LIST = "vehicleList";
 
     @Autowired
@@ -85,7 +85,7 @@ public class VehicleController {
                          RedirectAttributes redirectAttributes) {
 
         List<VehicleRegisterForm> vehicleList = vehicleService.vehicleSearch(vehicleSearchForm.getSearchText(),vehicleSearchForm.getSearchType());
-        System.err.println("emppostty");
+        System.err.println("postty");
         if (vehicleList.isEmpty()) {
             redirectAttributes.addFlashAttribute("errorMessage", "No Vehicles found");
             System.err.println("empty");
@@ -100,8 +100,8 @@ public class VehicleController {
     @RequestMapping(value = "/admin/vehicleSearch/{id}/edit", method = RequestMethod.GET)
     public String vehicleEdit(Model model, @PathVariable("id") Long vehicleId) {
 
-
-        model.addAttribute(VEHICLE_REGISTER_FORM, new VehicleRegisterForm());
+        VehicleRegisterForm vehicleToEdit = vehicleService.findByVehicleId(vehicleId);
+        model.addAttribute(VEHICLE_TO_EDIT, vehicleToEdit);
         return "vehicleEdit";
     }
 
@@ -121,7 +121,7 @@ public class VehicleController {
         try {
 
 
-            vehicleService.vehicleRegister(vehicleRegisterForm);
+            vehicleService.editVehicle(vehicleRegisterForm);
             redirectAttributes.addFlashAttribute("success", true);
 
 

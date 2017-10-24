@@ -98,7 +98,7 @@
 
   <div class="form-group">
               <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">Register vehicle
+                <button type="submit" class="btn btn-primary btn-lg">Edit vehicle
               </div>
 
 
