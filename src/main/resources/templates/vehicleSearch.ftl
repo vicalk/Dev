@@ -21,8 +21,8 @@
          <form  class="form-inline" action="/admin/vehicleSearch" method="post" name="vehicleSearchForm id=name="vehicleSearchForm">
            <div class="col-sm-4 col-sm-offset-7">
            <div class="form-group">
-              <@spring.bind "vehicleSearchForm.vehicleSearchText"/>
-             <input type="text" class="form-control" name="vehicleSearchText" id="vehicleSearchText" placeholder="Search by Tax id or Email...">
+              <@spring.bind "vehicleSearchForm.SearchText"/>
+             <input type="text" class="form-control" name="SearchText" id="SearchText" placeholder="Search by Tax id or Email...">
              <span style="display: inline;" class="input-group-btn">
                <button class="btn btn-default btn-primary" type="submit">Search</button>
              </span>
@@ -35,13 +35,13 @@
 
           <div class="col-sm-4 col-sm-offset-7">
            <div class="form-group ">
-             <@spring.bind "vehicleSearchForm.vehicleSearchType"/>
+             <@spring.bind "vehicleSearchForm.SearchType"/>
              <label class="col-sm- control-label">Search by:</label>
  				<label class="radio-inline">
-                   <input type="radio" name="vehicleSearchType" id="vehicleSearchType" value="AFM" />Tax Id
+                   <input type="radio" name="SearchType" id="SearchType" value="AFM" />Tax Id
  				</label>
                 <label class="radio-inline">
-                   <input type="radio" checked="checked" name="vehicleSearchType" id="vehicleSearchType" value="PLATENO" />Plate number
+                   <input type="radio" checked="checked" name="SearchType" id="SearchType" value="PLATENO" />Plate number
  				</label> <br />
  			</div>
  		  </div>

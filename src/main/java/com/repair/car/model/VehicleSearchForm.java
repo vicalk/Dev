@@ -2,19 +2,17 @@ package com.repair.car.model;
 
 public class VehicleSearchForm {
 
-    private String plateNo;
+    private String searchText;
 
-    private String Afm;
+    private String searchType;
 
-    public String getPlateNo() {
-        return plateNo;
-    }
 
-    public void PlateNo(String plateNo) {
-        this.plateNo = plateNo;
-    }
+    public String getSearchText() { return searchText; }
 
-    public String getAfm() { return Afm; }
+    public void setSearchText(String userSearchText) { this.searchText = userSearchText; }
 
-    public void setAfm(String afm) { Afm = afm; }
+    public String getSearchType() { return searchType; }
+
+    public void setSearchType(String userSearchType) { this.searchType = userSearchType; }
 }
+

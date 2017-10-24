@@ -15,7 +15,7 @@ public interface VehicleService {
 
     void vehicleRegister(VehicleRegisterForm vehicleRegisterForm) throws Exception;
 
-    List<VehicleRegisterForm> vehicleSearch(String SearchText, String SearchType)
+    List<VehicleRegisterForm> vehicleSearch(String SearchText, String SearchType);
 
     List<VehicleRegisterForm> findAllVehicles();
 

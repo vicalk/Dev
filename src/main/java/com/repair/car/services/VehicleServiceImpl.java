@@ -58,22 +58,26 @@ public class VehicleServiceImpl implements VehicleService {
     @Override
     public List<VehicleRegisterForm> vehicleSearch(String searchText, String searchType)  {
 
-        List<User> retrievedUsers;
+        List<Vehicle> retrievedVehicles;
 
         switch (searchType) {
             case "AFM":
-                retrievedUsers =  java.util.Arrays.asList(vehicleRepository.findByAfm(searchText));
+
+                retrievedVehicles =  vehicleRepository.findByUser_UserId((userRepository.findByAfm(searchText)).getUserId());
+
                 break;
             case "PLATENO":
-                retrievedUsers =  vehicleRepository.findByPlateNo(searchText);
+
+                retrievedVehicles =  vehicleRepository.findByPlateNo(searchText);
+
                 break;
             default:
-                retrievedUsers = null ;
+                retrievedVehicles = null ;
         }
 
-        return retrievedUsers
+        return retrievedVehicles
                 .stream()
-                .map(UserConverter::buildUserForm)
+                .map(VehicleConverter::buildVehicleForm)
                 .collect(Collectors.toList());
     }
 

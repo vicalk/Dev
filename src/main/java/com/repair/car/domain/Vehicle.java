@@ -53,7 +53,6 @@ public class Vehicle implements Serializable {
 
     public Long getVehicleId() { return vehicleId; }
 
-    public void setVehicleId(Long vehicleId) { this.vehicleId = vehicleId; }
 
     public String getPlateNo() {
         return plateNo;
@@ -86,8 +85,6 @@ public class Vehicle implements Serializable {
     public void setColor(String color) {
         this.color = color;
     }
-
-
 
 
 
