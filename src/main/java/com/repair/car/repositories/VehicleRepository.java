@@ -10,11 +10,11 @@ import java.util.List;
 @Repository
 public interface VehicleRepository extends CrudRepository<Vehicle, Long> {
 
-   List<Vehicle> findAll();
+    List<Vehicle> findAll();
 
- List<Vehicle> findByPlateNo(String plateNo);
+    List<Vehicle> findByPlateNo(String plateNo);
 
-    List<Vehicle> findByVehicleId(Long vehicleId);
+    Vehicle findByVehicleId(Long vehicleId);
 
     List<Vehicle> findByUser_UserId(Long userId);
 

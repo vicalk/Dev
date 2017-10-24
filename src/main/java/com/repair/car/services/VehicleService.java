@@ -19,5 +19,11 @@ public interface VehicleService {
 
     List<VehicleRegisterForm> findAllVehicles();
 
+    void editVehicle(VehicleRegisterForm vehicleRegisterForm);
+
+    void deleteById(Long vehicleId);
 
 }
+
+
+

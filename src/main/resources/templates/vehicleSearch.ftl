@@ -16,12 +16,12 @@
 <#include "/navbar.ftl">
 
    <div class="container">
-       <h1>Admin</h1>
+       <h1>Vehicle Search</h1>
        <div class="row">
          <form  class="form-inline" action="/admin/vehicleSearch" method="post" name="vehicleSearchForm id=name="vehicleSearchForm">
            <div class="col-sm-4 col-sm-offset-7">
            <div class="form-group">
-              <@spring.bind "vehicleSearchForm.SearchText"/>
+              <@spring.bind "vehicleSearchForm.searchText"/>
              <input type="text" class="form-control" name="SearchText" id="SearchText" placeholder="Search by Tax id or Email...">
              <span style="display: inline;" class="input-group-btn">
                <button class="btn btn-default btn-primary" type="submit">Search</button>
@@ -35,7 +35,7 @@
 
           <div class="col-sm-4 col-sm-offset-7">
            <div class="form-group ">
-             <@spring.bind "vehicleSearchForm.SearchType"/>
+             <@spring.bind "vehicleSearchForm.searchType"/>
              <label class="col-sm- control-label">Search by:</label>
  				<label class="radio-inline">
                    <input type="radio" name="SearchType" id="SearchType" value="AFM" />Tax Id

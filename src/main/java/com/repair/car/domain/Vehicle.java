@@ -15,7 +15,7 @@ public class Vehicle implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long vehicleId;
 
-    @Column(name = "PLATENO", nullable = false)
+    @Column(name = "PLATENO", nullable = false,unique=true)
     private String plateNo;
 
     @Column(name = "CAR_MODEL")

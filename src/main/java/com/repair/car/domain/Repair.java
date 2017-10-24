@@ -28,7 +28,7 @@ public class Repair implements Serializable {
     @Column(name = "REPAIR_COST")
     private int repairCost;
 
-    @Column(name = "REPAIR_DESCRIPTION", nullable = false)
+    @Column(name = "REPAIR_DESCRIPTION")
     private String repairDescription;
 
     @ManyToOne(optional = false)

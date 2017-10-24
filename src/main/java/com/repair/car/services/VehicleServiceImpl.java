@@ -61,6 +61,7 @@ public class VehicleServiceImpl implements VehicleService {
         List<Vehicle> retrievedVehicles;
 
         switch (searchType) {
+
             case "AFM":
 
                 retrievedVehicles =  vehicleRepository.findByUser_UserId((userRepository.findByAfm(searchText)).getUserId());
@@ -81,7 +82,28 @@ public class VehicleServiceImpl implements VehicleService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public void editVehicle(VehicleRegisterForm vehicleRegisterForm) {
+
+        Vehicle vehicle = VehicleConverter.buildVehicleObject(vehicleRegisterForm);
+
+//        Vehicle persistVehicle = vehicleRepository.findByVehicleId(vehicle.getVehicleId());
+//
+////        vehicle.setUser(persistVehicle.getUser());
+
+        vehicleRepository.save(vehicle);
+        LOG.debug("Vehicle has been edited!");
+
+    }
+
+    @Override
+    public void deleteById(Long vehicleId) {
+        vehicleRepository.deleteByVehicleId(vehicleId);
+    }
+
 }
+
+
 
 
 
