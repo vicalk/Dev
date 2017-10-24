@@ -15,6 +15,8 @@ public interface VehicleService {
 
     void vehicleRegister(VehicleRegisterForm vehicleRegisterForm) throws Exception;
 
+    VehicleRegisterForm findByVehicleId(Long vehicleId);
+
     List<VehicleRegisterForm> vehicleSearch(String SearchText, String SearchType);
 
     List<VehicleRegisterForm> findAllVehicles();

@@ -83,7 +83,7 @@
              <td><form action="/admin/vehicleSearch/${vehicle.vehicleId}/delete" method="post">
                        <input class="btn btn-xs btn-danger" type="submit" value="Delete"/>
                  </form>
-                 <form action="/admin/vehicleSearch/${vehicle.vehicleId}/edit" method="post">
+                 <form action="/admin/vehicleSearch/${vehicle.vehicleId}/edit" method="get">
                                         <input class="btn btn-xs btn-default" type="submit" value="Edit"/>
                                   </form>
 

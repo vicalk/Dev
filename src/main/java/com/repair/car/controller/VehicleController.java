@@ -1,6 +1,7 @@
 package com.repair.car.controller;
 
 
+import com.repair.car.domain.Vehicle;
 import com.repair.car.model.VehicleRegisterForm;
 import com.repair.car.model.VehicleSearchForm;
 import com.repair.car.services.VehicleService;
@@ -96,16 +97,16 @@ public class VehicleController {
 
 /////////////////
 
-    @RequestMapping(value = "/admin//admin/vehicleSearch/{id}/delete", method = RequestMethod.GET)
-    public String vehicleEdit(Model model) {
+    @RequestMapping(value = "/admin/vehicleSearch/{id}/edit", method = RequestMethod.GET)
+    public String vehicleEdit(Model model, @PathVariable("id") Long vehicleId) {
 
-        System.err.println("qq");
+
         model.addAttribute(VEHICLE_REGISTER_FORM, new VehicleRegisterForm());
-        return "vehicleCreate";
+        return "vehicleEdit";
     }
 
-    @RequestMapping(value = "/admin/vehicleCreate", method = RequestMethod.POST)
-    public String vehicleRegister(Model model,@Valid @ModelAttribute(VEHICLE_REGISTER_FORM)
+    @RequestMapping(value = "/admin/vehicleSearch/{id}/edit", method = RequestMethod.POST)
+    public String vehicleEdit(Model model,@Valid @ModelAttribute(VEHICLE_REGISTER_FORM)
             VehicleRegisterForm vehicleRegisterForm,
                                   BindingResult bindingResult, HttpSession session,
                                   RedirectAttributes redirectAttributes) {
@@ -114,7 +115,7 @@ public class VehicleController {
 
             logger.error(String.format("%s Validation Errors present: ", bindingResult.getErrorCount()));
             model.addAttribute(VEHICLE_REGISTER_FORM, vehicleRegisterForm);
-            return "vehicleCreate";
+            return "vehicleEdit";
         }
 
         try {
@@ -128,11 +129,11 @@ public class VehicleController {
         } catch (Exception exception) {
 
             redirectAttributes.addFlashAttribute("error", true);
-            logger.error("Vehicle registration failed: " + exception);
+            logger.error("Vehicle Edit failed: " + exception);
 
         }
 
-        return "redirect:/admin/vehicleCreate";
+        return "redirect:/admin/vehicleEdit";
     }
 
 

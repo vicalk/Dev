@@ -42,6 +42,13 @@ public class VehicleServiceImpl implements VehicleService {
         LOG.debug("Vehicle has been registered!");
 
     }
+    @Override
+    public VehicleRegisterForm findByVehicleId(Long vehicleId){
+
+       return VehicleConverter.buildVehicleForm(vehicleRepository.findByVehicleId(vehicleId));
+
+    }
+
 
     @Override
     public List<VehicleRegisterForm> findAllVehicles() {
